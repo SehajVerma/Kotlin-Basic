@@ -1,0 +1,24 @@
+Arrays in kotlin
+
+Val num = arrayOf(1,2,3,4,5)
+
+Num.set(0,1)   index-->0  value-->1
+
+Val numString = arrayOf<String>("1","2","3")    //MOST USED IN KOTLIN
+
+Val numString = arrayOf<String>("1","2",3)   //This will not work bcoz we have initilized string type array
+
+Val num = intArrayOf(1,2,3,4,5,6)    //only array of int type
+
+Val num = arrayOf(size:6,{ i -> i*1} )    Output ----> 0,1,2,3,4,5
+
+Val nullArray = arrayOfNull<String>(size:6) 
+                            OR 
+val nullArray  = arrayOfNullS<Student>()  Student is a class and we want to make array of children
+
+IF USE DON’T WANT TO FILL THE ARRAY i.e You don’t know the values but size of array
+Use
+Val num = IntArray(4)   //say size=4
+And set values as
+Num.set(0,1)
+Num.set(1,2);
