@@ -1,0 +1,12 @@
+Maps in Kotlin
+
+Val mapList = mapOf("Name" to "Sehaj", 2017 to 2019 , "Birthday" to 1998)
+mapList.set() will not work bcoz map is immutable
+
+For adding items to map use HashMap
+
+Val HashMapList = hashMapOf("Name" to "Sehaj", 2017 to 2019 , "Birthday" to 1998)
+HashMapList.set("Class" to "Btech") will work bcoz map is mutable i.e we can add items explicitly
+                           
+                             OR
+HashMapList["Collge"] = "Thapar"
