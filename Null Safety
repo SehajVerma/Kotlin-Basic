@@ -1,0 +1,14 @@
+Null Safety
+
+Var f:String = null
+This is wrong bcoz we are assigning a null type to a non-null type
+Instead:
+Var f:String? = null
+? - makes sure that no NullPointerException is occurred at compiletime
+
+For finding size:
+var size:INT = f ? length ? : 0
+If f==null
+Then f.length = 0
+         then
+                f.length = jo bhi string ki length hai
