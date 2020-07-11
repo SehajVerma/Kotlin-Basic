@@ -1,0 +1,16 @@
+Var and val are two keywords used in kotlin
+
+
+Var - is mutable and global i.e it can be changed multiple times 
+Val - is immutable i.e is final and cannot be changed
+
+Now you cannot use these as global variables with only defination
+Like
+Var a:String
+Val b:String   //you cannot initilize val b afterwards do it here only
+(This will not work)
+
+But,
+lateinit var a:String   //late Initilization and initilize it afterwards in main
+
+Val g:String = "Sehaj" // This will work
