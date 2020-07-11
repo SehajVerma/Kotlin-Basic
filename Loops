@@ -1,0 +1,26 @@
+Loops in Kotlin
+
+
+All loops while , do, for works in kotlin
+Difference b/w while and for is that in while we don’t know how many elements are there like in a file which contains text
+
+But in kotlin a forEach loop exists
+
+For hashMap
+hashMapofNames.forEach{any , any2 -> 
+      println(" " + any + any2)
+      }
+  any ---> key
+  any2 -->value
+
+For mutableList
+
+mutableList.forEach{ 
+       println(it)          
+}
+
+For Any Generic List    //any list of int or string
+
+nameString.forEach{ 
+       println(it)          
+}
