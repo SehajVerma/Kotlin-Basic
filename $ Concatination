@@ -1,0 +1,7 @@
+$ use for concatination
+
+Var f : String = "Sehaj"
+
+println("This is $f "Verma")
+
+Println("This is"  ${ f.capatilize() } "Verma with length of ${ f.length() }")
