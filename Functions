@@ -1,0 +1,75 @@
+Functions in Kotlin
+
+
+fun main() {
+    println(getName())
+}
+fun getName() : String{
+    val name : String ="sehaj";
+    return name
+}
+
+
+
+fun main() {
+    println(square3(20))
+}
+fun square(num : Int) : Int {
+    return num*num;
+}
+fun square2(num : Int) : Int = num*num
+
+fun square3(num : Int) = num*num
+
+//Default and Positional and Named Arguments
+
+fun main() {
+    showUser("Sehaj",23,true)   //Positional Argument
+    showUser2("Sehaj",23,false)
+    showUser3("Sehaj")    //Default Argument
+    showUser4(name = "Sehaj", age = 22, isActive = false)    // Named Argument
+   showUser5( age = 22,  name = "Sehaj", isActive = false)  // Named Argument
+   showUser6(name = "Sehaj", isActive = false)
+}
+fun showUser(name : String , age : Int , isActive : Boolean){
+  println("Name $name, Age $age, Active : $isActive")
+}
+fun showUser2(name : String , age : Int  = 18 , isActive : Boolean = true){
+  println("Name $name, Age $age, Active : $isActive")
+}
+fun showUser3(name : String , age : Int = 18, isActive : Boolean = true){
+  println("Name $name, Age $age, Active : $isActive")
+}
+fun showUser4(name : String , age : Int , isActive : Boolean ){
+  println("Name $name, Age $age, Active : $isActive")
+}
+ 
+fun showUser5(name : String , age : Int , isActive : Boolean ){
+  println("Name $name, Age $age, Active : $isActive")
+}
+
+ 
+fun showUser5(name : String , age : Int = 25 , isActive : Boolean ){
+  println("Name $name, Age $age, Active : $isActive")
+}
+
+//Output
+Name Sehaj, Age 23, Active : true 
+Name Sehaj, Age 23, Active : false 
+Name Sehaj, Age 18, Active : true
+Name Sehaj, Age 22, Active : false
+Name Sehaj, Age 22, Active : false
+Name Sehaj, Age 25, Active : false
+
+
+
+// Variable Arguments in Function
+
+fun main(){
+    showAndPrintArg(2,3,4,5,6,7,8,9)
+}
+fun showAndPrintArg(vararg num : Int){
+    println("Size is ${num.size}")
+    for(no in num)
+        println(no)
+}
