@@ -1,7 +1,10 @@
 $ use for concatination
 
-Var f : String = "Sehaj"
+fun main ()
+{
+var f : String = "Sehaj"
 
-println("This is $f "Verma")
+println("This is $f Verma")
 
-Println("This is"  ${ f.capatilize() } "Verma with length of ${ f.length() }")
+println("This is  ${ f.capitalize() } Verma with length of ${f.length}")
+}
