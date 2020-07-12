@@ -1,0 +1,22 @@
+When as a replacement for Switch
+
+ val num : Int = 2
+
+//When you need to return something
+ var x = When(num)
+{
+    1 -> "One"
+    2 -> "Two"
+    3 -> "Three"
+    else -> "No num"
+}
+ println("Str is $x)
+
+//When you want to print like this
+When(num)
+{
+    1 -> println("One")
+    2 -> prinln("Two")
+    3 -> "Three"
+    else -> "No num"
+}
