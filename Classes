@@ -1,0 +1,154 @@
+Classes in Kotlin
+
+Kotlin does not support structure
+
+//Simple Class
+fun main() {
+    val user = Account()
+    println(user.accno)
+    user.deposit(100F)
+    user.withdrawal(50F)
+    println(user.amount)
+}
+class Account{
+    var accno:Int = 1234
+    var name:String  ="sehaj"
+    var amount:Float = 100F
+    
+//we don’t write val amount bcoz for function it is val by default
+
+    fun deposit(amount:Float)
+    {
+        this.amount+=amount;
+    }
+    fun withdrawal(amount:Float)
+    {
+        this.amount-=amount;
+    }
+}
+
+//Inserting user values from object using insert function
+fun main() {
+    val user = Account()
+    user.insert(1234,"sehaj",100F)
+    println(user.accno)
+    user.deposit(100F)
+    user.withdrawal(50F)
+    println(user.amount)
+}
+class Account{
+    var accno:Int = 0
+    var name:String?= null
+    var amount:Float = 0F
+    
+    fun insert(acc:Int,n:String,amt:Float)
+    {
+        accno=acc
+        name=n
+        amount=amt
+    }
+    fun deposit(amount:Float)
+    {
+        this.amount+=amount;
+    }
+    fun withdrawal(amount:Float)
+    {
+        this.amount-=amount;
+    }
+}
+
+//Constructing Primary Constructor
+fun main() {
+    val user = Account(1234,"sehaj",100F)
+    println(user.accno)
+    user.deposit(100F)
+    user.withdrawal(50F)
+    println(user.amount)
+}
+class Account(var accno:Int,var name:String,var amount:Float){
+
+    fun deposit(amount:Float)
+    {
+        this.amount+=amount;
+    }
+    fun withdrawal(amount:Float)
+    {
+        this.amount-=amount;
+    }
+}
+
+//Constructing Primary Constructor using init block
+fun main() {
+    val user = Account(1234,"sehaj",100F)
+    println(user.accno)
+    user.deposit(100F)
+    user.withdrawal(50F)
+    println(user.amount)
+}
+class Account(accno:Int,name:String,amount:Float){
+    var accno:Int = 0
+    var name:String?= null
+    var amount:Float = 0F
+    init{
+        this.accno=accno
+        this.name=name.capitalize()   //init is used to modify how we want to store data
+        this.amount=amount             // eg giving 1000 free to first time users
+                                                                   thiis.amount=amount+1000
+    }
+
+    fun deposit(amount:Float)
+    {
+        this.amount+=amount;
+    }
+    fun withdrawal(amount:Float)
+    {
+        this.amount-=amount;
+    }
+}
+
+//Constructiong Secondary Constructor
+
+fun main() {
+    var user1 = Account(1234)
+    var user2 = Account(12345,"Sehaj")
+    var user3 = Account(123456,"Verma",100f)
+    println("Account no of ${user2.name} is ${user2.accno}")
+    println(user3.name)
+    user3.deposit(100F)
+    user3.withdrawal(50F)
+    println(user3.amount)
+}
+class Account{
+    var accno:Int = 0
+    var name:String?= null
+    var amount:Float = 0F
+    
+    constructor(accn:Int)
+    {
+        this.accno=accn
+    }
+    constructor(accn:Int,name:String)
+    {
+        this.accno=accn
+        this.name=name
+    }
+    constructor(accn:Int,name:String,amount:Float)
+    {
+        this.accno=accn
+        this.name=name
+        this.amount=amount
+    }
+
+    fun deposit(amount:Float)
+    {
+        this.amount+=amount;
+    }
+    fun withdrawal(amount:Float)
+    {
+        this.amount-=amount;
+    }
+}
+//Output
+Account no of Sehaj is 12345 
+Verma
+150.0 
